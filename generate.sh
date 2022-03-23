@@ -2,8 +2,8 @@
 set -eu
 shopt -s extglob
 
-PROJECT="msm8916"
-REPOSITORY="msm8916-mainline/linux-panel-drivers"
+PROJECT="msm8953"
+REPOSITORY="msm8953-mainline/linux-panel-drivers"
 KCONFIG="CONFIG_DRM_PANEL_${PROJECT^^}_GENERATED"
 GENERATOR="linux-mdss-dsi-panel-driver-generator"
 
@@ -61,7 +61,7 @@ fi
 
 KCONFIG_HELP="
 config ${KCONFIG#CONFIG_}
-	tristate \"MSM8916 panel drivers generated with $GENERATOR\"
+	tristate \"MSM8953 panel drivers generated with $GENERATOR\"
 	depends on GPIOLIB && OF && REGULATOR
 	depends on DRM_MIPI_DSI"
 
